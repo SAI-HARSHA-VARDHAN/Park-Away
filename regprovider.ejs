@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>give</title>
+		<link rel="stylesheet" href="css1/style.css">
+		<style>
+			#btt{
+				margin-left: 230px;
+				border-radius: 40px;
+			}
+		</style>
+	</head>
+<body>
+<div>
+	<div>
+		<img src="images/park.png" alt="main image" class="main-img">
+	</div>
+	<div class="form-container-info-give">
+		<div class="heading">
+			<h1>Give a Parking</h1>
+		</div>
+		<div class="heading2">
+			<h3>Little more information!</h3>
+		</div>
+		<form action="regprovider" method="POST" enctype="multipart/form-data">
+			<input type="hidden" name="email" value=<%= email %>>
+			<input type="hidden" name="lat" value=<%= lat %>>
+			<input type="hidden" name="lon" value=<%= lon %>>
+			
+			<input type="file" name="picture" accept="application/x-zip-compressed,image/*" required><br>
+			<div class="submit-info">
+				<input type="submit" value="Continue" name="submit">
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

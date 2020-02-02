@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Signup</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+<body>
+<div>
+	<div>
+		<img src="images/park.png" alt="main image" class="main-img">
+	</div>
+	<div class="form-container-signup">
+		<div class="heading">
+			<h1>Sign Up</h1>
+		</div>
+		<form action="adduser" method="POST">
+			<input type="text" name="name" placeholder="Name" required autofocus><br>
+			<input type="email" name="email" placeholder="E-mail ID" required autocomplete="on"><br>
+			<input type="number" name="number" placeholder="Contact number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required autocomplete="on"><br>
+			<input type="number" name="aadhar" placeholder="Aadhar Card Number" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required><br>
+			<input type="password" name="password" placeholder="Create Password" required><br>
+			<input type="password" name="re-type" placeholder="Re-type Password" required><br>
+			<div class="submitted">
+				<input type="submit" value="SIGN IN" name="submit">
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

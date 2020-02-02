@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Signup</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+<body>
+<div>
+	<div>
+		<img src="images/park.png" alt="main image" class="main-img">
+	</div>
+	<div class="form-container-info">
+		<div class="heading">
+			<h1>Get a Parking</h1>
+		</div>
+		<form action="reguser" method="POST">
+            <input type="email" name="email" value=<%= email %> hidden> 
+														<input type="hidden" name="lat" value=<%= lat %>>
+														<input type="hidden" name="lon" value=<%= lon %> > 
+			<input type="file" name="licence" placeholder="Licence" required><br>
+			<input type="file" name="insurance" placeholder="Insurance" required ><br>
+			<div class="submit-info">
+				<input type="submit" value="Continue" name="submit">
+			</div>
+			<div class="link-back">
+				<button type="submit"><a href="category.html">back</a></button>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

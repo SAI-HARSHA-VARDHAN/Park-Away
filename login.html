@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>login</title>
+<link rel="stylesheet" href="css/style2.css">
+<script>
+                function initGeolocation()
+                    {
+                        if( navigator.geolocation )
+                        {
+                        navigator.geolocation.getCurrentPosition( success, fail );
+                        }
+                        else
+                        {
+                        alert("Sorry, your browser does not support geolocation services.");
+                        }
+                    }
+                function success(position)
+                    {
+
+                        document.getElementById('lon').value = position.coords.longitude;
+                        document.getElementById('lat').value = position.coords.latitude;
+                    }
+                function fail(position)
+                    {
+                        alert("Location Access denied,Try turning on GPS.");
+                    }
+</script>
+</head>
+<div>
+	<div>
+		<img src="images/park.png" alt="main image" class="main-image">
+	</div>
+	<hr>
+	<div class="links-container-bottom-login">
+		<div class="heading">
+			<h1>LOGIN</h1>
+		</div>
+		<form action="validateuser" method="POST">
+				<div class="section1">
+					<input type="text" name="email" placeholder="Email" required autofocus><br>
+					<input type="password" name="password" placeholder="Password" required><br>
+				</div>
+				<div class="check">
+					<input type="checkbox" name="location" id="location" onchange="initGeolocation();" required>Grant location access
+				</div>
+				<div class="submitted">
+                    <input type="text" name="lat" id="lat" hidden>
+                    <input type="text" name="lon" id="lon" hidden>
+					<input type="submit" value="login" name="submit">
+				</div>
+		</form>
+	</div>
+</div>
+</html>

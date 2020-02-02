@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>category</title>
+<link rel="stylesheet" href="css/style2.css">
+<script>
+	function first(){
+		document.getElementById("first").submit();
+	}
+	function second(){
+		document.getElementById("second").submit();
+	}
+</script>
+</head>
+<div>
+	<div>
+		<img src="images/park.png" alt="main image" class="main-image">
+	</div>
+	<hr>
+	<div class="get-a-parking">
+		<form action="asuser" method="POST" id="first"><input type="email" name="email" value=<%= details.email %> hidden> 
+														<input type="hidden" name="lat" value=<%= details.lat %>>
+														<input type="hidden" name="lon" value=<%= details.lon %> > 
+													 </form>
+			<button type="button" onclick="first()"><img src="images/get.png" class="get-img"><br><br><a href="#">Get a parking</a></button><br><br><br><br>
+		<form action="asprovider" method="POST" id="second"><input type="email" name="email" value=<%= details.email %> hidden>
+			<input type="hidden" name="lat" value=<%= details.lat %> >
+			<input type="hidden" name="lon" value=<%= details.lon %> > 
+		</form>
+			<button type="button" onclick="second()"><img src="images/give.png" class="get-img"><br><a href="#">Give a parking</a></button>
+	</div>
+</div>
+</html>

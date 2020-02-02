@@ -1,0 +1,147 @@
+body,html{
+	margin:0px;
+	padding:0px;
+	background-color:black;
+}
+.main-image{
+	margin-top:40px;
+	margin-left:40px;
+	height:550px;
+	width:550px;
+}
+hr{
+	position:absolute;
+	top:50%;
+	left:40%;
+	width:30%;
+	transform:rotate(90deg);
+}
+.links-container{
+	height:300px;
+	width:300px;
+	border:none;
+	top:30%;
+	right:12%;
+	position:absolute;
+}
+.links-container button{
+	border:2px solid #ff5c5c;
+	width:110%;
+	height:18%;
+	font-size:120%;
+	border-radius:28px;
+	background-color:#ff5c5c;
+	margin-left:0%;
+}
+.links-container button a{
+	
+	text-decoration:none;
+	color:white;
+}
+.links-container-bottom{
+		right:16%;
+		top:64%;
+		position:absolute;
+}
+.links-container-bottom .linkers a{
+	
+	text-decoration:none;
+	color:white;
+	font-size:120%;
+}
+.links-container-bottom .linkers hr{
+	
+	transform:rotate(90deg);
+	width:20px;
+	right:24px;
+	top:10%;
+}
+.linkers a:hover{
+	
+	color:#ff5c5c;
+}
+.links-container-bottom-login{
+	
+	height:600px;
+	width:400px;
+	border:none;
+	top:10%;
+	right:8%;
+	position:absolute;
+	
+	
+}.section1{
+	
+	margin-top:70px;
+}
+.section1 input{
+	
+	border-radius:20px;
+	width:85%;
+	height:8%;
+	margin-top:40px;
+	outline:none;
+	background-color:white;
+	color:black;
+	font-size:25px;
+	padding:5px;
+	margin-left:20px;
+}
+.submitted input{
+	
+	border: 2px solid #ff5c5c;
+	width:50%;
+	height:10%;
+	border-radius:20px;
+	background-color:#ff5c5c;
+	color:black;
+	margin-top:50px;
+	margin-left:85px;
+	font-size:25px;
+	cursor:pointer;
+}
+.heading h1{
+	
+	color:#ff5c5c;
+	font-size:40px;
+	margin-left:100px;
+}
+.check{
+	margin-top:30px;
+	color:white;
+	font-size:20px;
+}
+.check input{
+	margin-top:30px;
+	color:white;
+	font-size:30px;
+	position:relative;
+	width:100px;
+}
+.get-a-parking{
+	height:300px;
+	width:300px;
+	border:none;
+	top:20%;
+	right:12%;
+	position:absolute;
+}
+.get-a-parking button{
+	border:2px solid #ff5c5c;
+	width:70%;
+	height:60%;
+	font-size:120%;
+	border-radius:60px;
+	background-color:#ff5c5c;
+	margin-left:0%;
+}
+.get-a-parking button a{
+	
+	text-decoration:none;
+	color:white;
+}
+.get-img{
+	
+	width:90px;
+	height:90px;
+}

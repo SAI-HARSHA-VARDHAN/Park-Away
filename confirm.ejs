@@ -1,0 +1,149 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>parkaway</title>
+<link rel="stylesheet" href="css/style.css">
+<script>
+
+    function one(){
+        document.getElementById("set1").style.opacity=0.5;
+    }
+    function two(){
+        document.getElementById("set2").style.opacity=0.5;
+    }
+    function three(){
+        document.getElementById("set3").style.opacity=0.5;
+    }
+    function sub1(){
+        document.getElementById("form1").submit();
+    }
+    function sub2(){
+        document.getElementById("form2").submit();
+    }
+</script>
+<style>
+    #amount1{
+	color:white;
+	font-family: segoe;
+	text-align: center;
+}
+#amount{
+border-style: solid;
+border-color: white;
+border-width: 2px;
+border-radius:50px;
+height:50px;
+padding:20px;	
+margin-left: 570px;
+width:400px;
+}
+    .set:hover{
+        cursor: pointer;
+    }
+    #haa:hover{
+        cursor: pointer;
+    }
+    #haa1:hover{
+        cursor: pointer;
+    }
+    #amount{
+        height:80px;
+    }
+    select{
+        display: block;
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 700;
+        color: #444;
+        line-height: 1.3;
+        padding: .6em 1.4em .5em .8em;
+        width: 100%;
+        max-width: 100%; 
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid #aaa;
+        box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+        border-radius: .5em;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+        linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+    }
+    .select-css::-ms-expand {
+        display: none;
+    }
+    .select-css:hover {
+        border-color: #888;
+    }
+    .select-css:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        color: #222; 
+        outline: none;
+    }
+    .select-css option {
+        font-weight:normal;
+    }
+    }
+</style>
+<script>
+    function store(){
+    var a = document.getElementById("sel").value;
+    if(a=="30 mins"){
+        var m = 8;
+    }
+    if(a=="1 hour"){
+        var m = 10;
+    }
+    if(a=="2 hours"){
+        var m = 20;
+    }
+    if(a=="3 hours"){
+        var m = 30;
+    }
+    document.getElementById("earnm").innerHTML=m;
+    document.getElementById("earn").value=m;
+    }
+</script>
+</head>	
+<body>
+    <div>
+        <h1 id="det">Details</h1>
+        <div id="amount"><span>
+            <select id="sel" onchange="store()">
+                <option hidden>Select Duration</option>
+                <option>30 mins</option>
+                <option>1 hour</option>
+                <option>2 hours</option>
+                <option>3 hours</option>
+            </select>
+            <h1 id="amount1" style="margin-top: 10px;">
+                Total Amount : Rs <span id="earnm">?</span>
+            </h1>
+        </span>
+        </div>
+        <br/><br/>
+        <h1 id="amount1">Pay via</h1>
+        <div id="imset">
+        <img src="images/Google-Pay-Logo-Icon-PNG-1024x1024.png" id="set1" class="set" onclick="one()">
+        <img src="images/paytm-512.png" class="set" id="set2" onclick="two()">
+        <img src="images/MasterCard_early_1990s_logo.png" id="set3" class="set" onclick="three()">
+        <div class="submitted">
+        <form action="final" id="form1" method="POST"><input type="hidden" name="email" value=<%= email %> >
+            <input type="hidden" name="earn" id="earn">
+        </form>
+        <form action="back" id="form2" method="POST"></form>
+        <input type="submit" value="Confirm" id="haa" name="submit" onclick="sub1()"><br/>
+        <input type="submit" value="Cancel" id="haa1" name="submit" onclick="sub2()">
+    </div>
+    </div>
+        <img src="images/park.png" alt="main image" id="mainimage">
+    </div>
+    </body>
+</html>

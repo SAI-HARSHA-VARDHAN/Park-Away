@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Final</title>
+            <meta charset="utf-8">
+            <style>
+                #title{
+                overflow: hidden; 
+                border-right: .15em; 
+                white-space: nowrap; 
+                margin: 0 auto; 
+                letter-spacing: .15em; 
+                animation: 
+                    typing 3.5s steps(40),
+                    blink-caret .75s step-end infinite;
+                font-size: 40px;
+                background: -webkit-linear-gradient(#c2f556, #22d4c9);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                }
+                @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+                }
+                @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: orange; }
+                }
+                #up{
+                    margin-top: 100px;
+                    margin-left: 450px;
+                    color:white;
+                    border: solid;
+                    border-radius: 50px;
+                    text-align: center;
+                    width:600px;
+                }
+                #head{
+                    color:#ff5c5c;
+                    font-style: calibri;
+                    margin-top: 80px;
+                    margin-left: 630px;
+                }
+                thead{
+                    color:#ff5c5c;
+                    text-align: center;
+                }
+                table{
+                    border-collapse: collapse;
+                    width:600px;
+                    color:white;
+                    cellspacing:10px;
+                }
+                td{
+                    text-align: center;
+                }
+                tr{
+                    font-size: 30px;
+                }
+                #title{
+                    color:white;
+                    font-family:calibri;
+                    font-size:30px;
+                }
+            </style>
+        </head>
+        <body bgcolor="black">
+            <h3 id="title">Welcome <%= details.name %></h3>
+            <div id="up">
+                <h1>Total Earnings : <%= details.earnings %> </h1>
+            </div>
+            <%= bookings = details.bookings %>
+            <h1 id="head">Day wise Earnings </h1><br/><br/>
+            <table id="table" cell-spacing="0" align="center" border="1" cellpadding="10">
+                <thead>
+                    <td>Date</td>
+                    <td>Earnings</td>
+                </thead>
+                <% bookings.forEach(function(bookings){ %>
+                    <tr>
+                        <td><%= bookings.date %></td>
+                        <td><%= bookings.earn %> Rs</td>
+                    </tr> 
+                <% }) %> 
+            </table>
+        </body>
+    </html>
